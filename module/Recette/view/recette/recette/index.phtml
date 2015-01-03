@@ -1,0 +1,32 @@
+<?php
+$titre = 'Mes Recettes';
+ $this->headTitle($titre);
+ ?>
+ <h1><?php echo $this->escapeHtml($titre); ?></h1>
+ <p>
+     <a href="<?php echo $this->url('recette', array('action'=>'add'));?>">Ajouter une nouvelle recette</a>
+ </p>
+
+ <table class="table">
+ <tr>
+     <th>Titre</th>
+     <th>Aliments</th>
+     <th>&nbsp;</th>
+ </tr>
+ <?php foreach ($recettes as $recette) : ?>
+ <tr>
+     <td><?php echo $this->escapeHtml($recette->titre);?></td>
+     <td><?php echo $this->escapeHtml($recette->aliments);?></td>
+     <td>
+         <a href="<?php echo $this->url('recette',
+             array('action'=>'edit', 'idRecette' => $recette->idRecette));?>">Modifier</a>
+       
+         <a href="<?php echo $this->url('recette',
+             array('action'=>'delete', 'idRecette' => $recette->idRecette));?>">Supprimer</a>
+     </td>
+ </tr>
+ <?php endforeach; ?>
+ </table>
+ 
+  <?php var_dump($recette->idRecette);?>
+ 

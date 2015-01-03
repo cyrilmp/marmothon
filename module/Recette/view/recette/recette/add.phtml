@@ -1,0 +1,17 @@
+<?php
+ // module/Album/view/album/album/add.phtml:
+
+ $titre = 'Ajouter une nouvelle recette';
+ $this->headTitle($titre);
+ ?>
+ <h1><?php echo $this->escapeHtml($titre); ?></h1>
+ <?php
+ $form->setAttribute('action', $this->url('recette', array('action' => 'add')));
+ $form->prepare();
+
+ echo $this->form()->openTag($form);
+ echo $this->formHidden($form->get('idRecette'));
+ echo $this->formRow($form->get('titre'));
+ echo $this->formRow($form->get('aliments'));
+ echo $this->formSubmit($form->get('submit'));
+ echo $this->form()->closeTag();

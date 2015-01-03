@@ -1,0 +1,25 @@
+<?php
+ // module/Recette/view/recette/recette/delete.phtml:
+
+ $titre = 'Supprimer une recette';
+ $this->headTitle($titre);
+ ?>
+ <h1><?php echo $this->escapeHtml($titre); ?></h1>
+
+ <p>Etes vous sur de vouloir supprimer :
+     '<?php echo $this->escapeHtml($recette->titre); ?>' avec les aliments :
+     '<?php echo $this->escapeHtml($recette->aliments); ?>'?
+ </p>
+ <?php
+ $url = $this->url('recette', array(
+     'action' => 'delete',
+     'idRecette'     => $this->idRecette,
+ ));
+ ?>
+ <form action="<?php echo $url; ?>" method="post">
+ <div>
+     <input type="hidden" name="id" value="<?php echo (int) $recette->idRecette; ?>" />
+     <input type="submit" name="del" value="Yes" />
+     <input type="submit" name="del" value="No" />
+ </div>
+ </form>
