@@ -41,10 +41,10 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Accueil') ?></a></li>
                         <li class="active"><a href="<?php echo $this->url('recette') ?>"><?php echo $this->translate('Recette') ?></a></li>
-                        <li class="active"><a href="<?php echo $this->url('auth')/*, array('action'=>'login',*/ ; ?>"><button>Connection</button></a></li>
-                        <li class="active"><a href="<?php echo $this->url('auth') ?>"><button>Inscription</button></a></li>
+                        <li class="active"><a href="http://localhost/marmothon/public/auth/index/login"><button>Connection</button></a></li>
+                        <li class="active"><a href="<?php echo $this->url('auth/default', array('controller' => 'registration', 'action' => 'index'));?>"><button>Inscription</button></a></li>
                     </ul>
-                </div><!--/.nav-collapse -->
+                </div>
             </div>
         </nav>
         <div class="container">

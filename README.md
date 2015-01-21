@@ -10,6 +10,16 @@ looking to get their feet wet with ZF2.
 Installation
 ------------
 
+Copier-coller le projet et ouvrez le.
+Utiliser le script SQL "marmothon.sql" sur votre serveur
+
+Manuel Utilisation
+------------------
+
+Vous pouvez vous inscrire avec "inscription"
+Vous pouvez vous conecter avec "conexion"
+Vous pouvez consulter le module recette et y ajouter des recettes
+
 Using Composer (recommended)
 ----------------------------
 The recommended way to get a working copy of this project is to clone the repository
